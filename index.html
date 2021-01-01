@@ -10,377 +10,382 @@
 
 </head>
 <body>
+  <header>
+    <!-- ナビゲーション -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#signinModal">Signin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#signupModal">SignUp</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="logout">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
+
+    <!--  Modal signUp -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="signup-form">
+              <div class="form-group">
+                <input type="text" id="signup-email" class="form-control"
+                placeholder="Title" required>
+              </div>
+                <input type="password" id="signup-password" class="form-control"
+                placeholder="password" required>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Signup
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  Modal signIn -->
+    <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Signin</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="login-form">
+              <div class="form-group">
+                <input type="text" id="login-email" class="form-control"
+                placeholder="Title" required>
+              </div>
+                <input type="password" id="login-password" class="form-control"
+                placeholder="password" required>
+              </div>
+              <button type="submit" class="btn btn-secondary btn-block">
+                Login
+              </button>
+              <button type="button" class="btn btn-info btn-block" id="googleLogin">
+                Login with Google
+              </button>
+              <button type="button" class="btn btn-primary btn-block" id="facebookLogin">
+                Login with Facebook
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ここまで -->
   
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-toggle="modal" data-target="#signinModal">Signin</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-toggle="modal" data-target="#signupModal">SignUp</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" id="logout">Logout</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <div id="main-view"></div>
 
-
-  <!--  Modal signUp -->
-  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form id="signup-form">
-            <div class="form-group">
-              <input type="text" id="signup-email" class="form-control"
-              placeholder="Title" required>
-            </div>
-              <input type="password" id="signup-password" class="form-control"
-              placeholder="password" required>
-            </div>
-            <button type="submit" class="btn btn-primary">
-              Signup
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
+  <div class="top-message">
+    .
   </div>
 
-  <!--  Modal signIn -->
-  <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Signin</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form id="login-form">
-            <div class="form-group">
-              <input type="text" id="login-email" class="form-control"
-              placeholder="Title" required>
+  <div id="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="book-item">
+          <div class="book-item_image-wrapper">
+            <div class="book-image">
+              <a href="https://www.amazon.co.jp/%E6%96%B0%E7%89%88-%E7%A4%BE%E4%BC%9A%E4%BA%BA%E3%81%A8%E3%81%97%E3%81%A6%E5%A4%A7%E5%88%87%E3%81%AA%E3%81%93%E3%81%A8%E3%81%AF%E3%81%BF%E3%82%93%E3%81%AA%E3%83%87%E3%82%A3%E3%82%BA%E3%83%8B%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89%E3%81%A7%E6%95%99%E3%82%8F%E3%81%A3%E3%81%9F-%E9%A6%99%E5%8F%96%E8%B2%B4%E4%BF%A1/dp/4866671467">
+              <img class="book-item-image" alt="社会人として大切なことはデイズニーランドで教わった" src="./images/ディズニー本.jpg"></a>
             </div>
-              <input type="password" id="login-password" class="form-control"
-              placeholder="password" required>
-            </div>
-            <button type="submit" class="btn btn-secondary btn-block">
-              Login
-            </button>
-            <button type="button" class="btn btn-info btn-block" id="googleLogin">
-              Login with Google
-            </button>
-            <button type="button" class="btn btn-primary btn-block" id="facebookLogin">
-              Login with Facebook
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<div id="cover">
-  <h1 id="cover_title">あなたが紹介したいおすすめの一冊</h1>
-</div>
-<div id="container">
-  <div class="row">
-    <div class="col-md-4 col-sm-4 col-xs-12">
-      <div class="book-item">
-        <div class="book-item_image-wrapper">
-          <div class="book-image">
-            <a href="https://www.amazon.co.jp/%E6%96%B0%E7%89%88-%E7%A4%BE%E4%BC%9A%E4%BA%BA%E3%81%A8%E3%81%97%E3%81%A6%E5%A4%A7%E5%88%87%E3%81%AA%E3%81%93%E3%81%A8%E3%81%AF%E3%81%BF%E3%82%93%E3%81%AA%E3%83%87%E3%82%A3%E3%82%BA%E3%83%8B%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89%E3%81%A7%E6%95%99%E3%82%8F%E3%81%A3%E3%81%9F-%E9%A6%99%E5%8F%96%E8%B2%B4%E4%BF%A1/dp/4866671467">
-            <img class="book-item-image" alt="社会人として大切なことはデイズニーランドで教わった" src="./images/ディズニー本.jpg"></a>
-          </div>
-          <div class="content-wrapper">
-            <div class="book-title"><a class="link-normal"href="https://www.amazon.co.jp/%E6%96%B0%E7%89%88-%E7%A4%BE%E4%BC%9A%E4%BA%BA%E3%81%A8%E3%81%97%E3%81%A6%E5%A4%A7%E5%88%87%E3%81%AA%E3%81%93%E3%81%A8%E3%81%AF%E3%81%BF%E3%82%93%E3%81%AA%E3%83%87%E3%82%A3%E3%82%BA%E3%83%8B%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89%E3%81%A7%E6%95%99%E3%82%8F%E3%81%A3%E3%81%9F-%E9%A6%99%E5%8F%96%E8%B2%B4%E4%BF%A1/dp/4866671467">社会人として大切なことはデイズニーランドで教わった</a>
-            </div>
-            <div class="main-message">
-              社会人になっても常に意識したい一冊
-            </div>
-            <div class="left-container">
-              <a href="#"><span class="fas fa-heart like-button"></span>:0</a>
-              <span class="message__time"></span>
-            </div>
-            <div class="message-profile">
-              <div class="user-image">
-                <img class="message-user-image" src="＃" alt="">
+            <div class="content-wrapper">
+              <div class="book-title"><a class="link-normal"href="https://www.amazon.co.jp/%E6%96%B0%E7%89%88-%E7%A4%BE%E4%BC%9A%E4%BA%BA%E3%81%A8%E3%81%97%E3%81%A6%E5%A4%A7%E5%88%87%E3%81%AA%E3%81%93%E3%81%A8%E3%81%AF%E3%81%BF%E3%82%93%E3%81%AA%E3%83%87%E3%82%A3%E3%82%BA%E3%83%8B%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89%E3%81%A7%E6%95%99%E3%82%8F%E3%81%A3%E3%81%9F-%E9%A6%99%E5%8F%96%E8%B2%B4%E4%BF%A1/dp/4866671467">社会人として大切なことはデイズニーランドで教わった</a>
+              </div>
+              <div class="main-message">
+                社会人になっても常に意識したい一冊
+              </div>
+              <div class="left-container">
+                <a href="#"><span class="fas fa-heart like-button"></span>:0</a>
+                <span class="message__time"></span>
+              </div>
+              <div class="message-profile">
+                <div class="user-image">
+                  <img class="message-user-image" src="＃" alt="">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-4 col-sm-4 col-xs-12">
-      <div class="book-item">
-        <div class="book-item_image-wrapper">
-          <div class="book-image">
-            <a href="https://www.amazon.co.jp/%E5%AE%8C%E5%85%A8%E7%89%88-%E7%84%A1%E7%A8%8E%E5%85%A5%E9%96%80-%E5%8F%AA%E9%87%8E%E7%AF%84%E7%94%B7/dp/4864106495">
-            <img class="book-item-image" alt="完全版無税入門" src="./images/無税入門.jpg"></a>
-          </div>
-          <div class="content-wrapper">
-            <div class="book-title"><a class="link-normal"href="https://www.amazon.co.jp/%E5%AE%8C%E5%85%A8%E7%89%88-%E7%84%A1%E7%A8%8E%E5%85%A5%E9%96%80-%E5%8F%AA%E9%87%8E%E7%AF%84%E7%94%B7/dp/4864106495">【 完全版 】無税入門</a>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="book-item">
+          <div class="book-item_image-wrapper">
+            <div class="book-image">
+              <a href="https://www.amazon.co.jp/%E5%AE%8C%E5%85%A8%E7%89%88-%E7%84%A1%E7%A8%8E%E5%85%A5%E9%96%80-%E5%8F%AA%E9%87%8E%E7%AF%84%E7%94%B7/dp/4864106495">
+              <img class="book-item-image" alt="完全版無税入門" src="./images/無税入門.jpg"></a>
             </div>
-            <div class="main-message">
-              年末調整や確定申告を知っている人は多いと思いますが、税金は無知の罰金と言われるくらいですから、知らないほど損します。
-            </div>
-            <div class="left-container">
-              <a href="#"><span class="fas fa-heart like-button"></span>:0</a>
-              <span class="message_time"></span>
-            </div>
-            <div class="message-profile">
-              <div class="user-image">
-                <img class="message-user-image" src="＃" alt="">
+            <div class="content-wrapper">
+              <div class="book-title"><a class="link-normal"href="https://www.amazon.co.jp/%E5%AE%8C%E5%85%A8%E7%89%88-%E7%84%A1%E7%A8%8E%E5%85%A5%E9%96%80-%E5%8F%AA%E9%87%8E%E7%AF%84%E7%94%B7/dp/4864106495">【 完全版 】無税入門</a>
+              </div>
+              <div class="main-message">
+                年末調整や確定申告を知っている人は多いと思いますが、税金は無知の罰金と言われるくらいですから、知らないほど損します。
+              </div>
+              <div class="left-container">
+                <a href="#"><span class="fas fa-heart like-button"></span>:0</a>
+                <span class="message_time"></span>
+              </div>
+              <div class="message-profile">
+                <div class="user-image">
+                  <img class="message-user-image" src="＃" alt="">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-4 col-sm-4 col-xs-12">
-      <div class="book-item">
-        <div class="book-item_image-wrapper">
-          <div class="book-image">
-            <a href="https://www.amazon.co.jp/%E3%80%8C%E3%81%84%E3%81%84%E8%B3%AA%E5%95%8F%E3%80%8D%E3%81%8C%E4%BA%BA%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99-%E8%B0%B7%E5%8E%9F-%E8%AA%A0/dp/4905073499">
-            <img class="book-item-image" alt="いい質問が人を動かす" src="./images/メモ術.jpg"></a>
-          </div>
-          <div class="content-wrapper">
-            <div class="book-title"><a class="link-normal"href="https://www.amazon.co.jp/%E3%80%8C%E3%81%84%E3%81%84%E8%B3%AA%E5%95%8F%E3%80%8D%E3%81%8C%E4%BA%BA%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99-%E8%B0%B7%E5%8E%9F-%E8%AA%A0/dp/4905073499">いい質問が人を動かす</a>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="book-item">
+          <div class="book-item_image-wrapper">
+            <div class="book-image">
+              <a href="https://www.amazon.co.jp/%E3%80%8C%E3%81%84%E3%81%84%E8%B3%AA%E5%95%8F%E3%80%8D%E3%81%8C%E4%BA%BA%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99-%E8%B0%B7%E5%8E%9F-%E8%AA%A0/dp/4905073499">
+              <img class="book-item-image" alt="いい質問が人を動かす" src="./images/メモ術.jpg"></a>
             </div>
-            <div class="main-message">
-              質問の改めて大事と気づきました。
-            </div>
-            <div class="left-container">
-              <a href="#"><span class="fas fa-heart like-button"></span>:0</a>
-              <span class="message_time"></span>
-            </div>
-            <div class="message-profile">
-              <div class="user-image">
-                <img class="message-user-image" src="＃" alt="">
+            <div class="content-wrapper">
+              <div class="book-title"><a class="link-normal"href="https://www.amazon.co.jp/%E3%80%8C%E3%81%84%E3%81%84%E8%B3%AA%E5%95%8F%E3%80%8D%E3%81%8C%E4%BA%BA%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99-%E8%B0%B7%E5%8E%9F-%E8%AA%A0/dp/4905073499">いい質問が人を動かす</a>
+              </div>
+              <div class="main-message">
+                質問の改めて大事と気づきました。
+              </div>
+              <div class="left-container">
+                <a href="#"><span class="fas fa-heart like-button"></span>:0</a>
+                <span class="message_time"></span>
+              </div>
+              <div class="message-profile">
+                <div class="user-image">
+                  <img class="message-user-image" src="＃" alt="">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-4 col-sm-4 col-xs-12">
-      <div class="book-item">
-        <div class="book-item_image-wrapper">
-          <div class="book-image">
-            <a href="https://www.amazon.co.jp/%E3%80%8C%E3%81%84%E3%81%84%E8%B3%AA%E5%95%8F%E3%80%8D%E3%81%8C%E4%BA%BA%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99-%E8%B0%B7%E5%8E%9F-%E8%AA%A0/dp/4905073499">
-            <img class="book-item-image" alt="いい質問が人を動かす" src="./images/いい質問が人を動かす.jpg"></a>
-          </div>
-          <div class="content-wrapper">
-            <div class="book-title"><a class="link-normal"href="https://www.amazon.co.jp/%E3%80%8C%E3%81%84%E3%81%84%E8%B3%AA%E5%95%8F%E3%80%8D%E3%81%8C%E4%BA%BA%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99-%E8%B0%B7%E5%8E%9F-%E8%AA%A0/dp/4905073499">いい質問が人を動かす</a>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="book-item">
+          <div class="book-item_image-wrapper">
+            <div class="book-image">
+              <a href="https://www.amazon.co.jp/%E3%80%8C%E3%81%84%E3%81%84%E8%B3%AA%E5%95%8F%E3%80%8D%E3%81%8C%E4%BA%BA%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99-%E8%B0%B7%E5%8E%9F-%E8%AA%A0/dp/4905073499">
+              <img class="book-item-image" alt="いい質問が人を動かす" src="./images/いい質問が人を動かす.jpg"></a>
             </div>
-            <div class="main-message">
-              質問の改めて大事と気づきました。
-            </div>
-            <div class="left-container">
-              <a href="#"><span class="fas fa-heart like-button"></span>:0</a>
-              <span class="message_time"></span>
-            </div>
-            <div class="message-profile">
-              <div class="user-image">
-                <img class="message-user-image" src="＃" alt="">
+            <div class="content-wrapper">
+              <div class="book-title"><a class="link-normal"href="https://www.amazon.co.jp/%E3%80%8C%E3%81%84%E3%81%84%E8%B3%AA%E5%95%8F%E3%80%8D%E3%81%8C%E4%BA%BA%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99-%E8%B0%B7%E5%8E%9F-%E8%AA%A0/dp/4905073499">いい質問が人を動かす</a>
+              </div>
+              <div class="main-message">
+                質問の改めて大事と気づきました。
+              </div>
+              <div class="left-container">
+                <a href="#"><span class="fas fa-heart like-button"></span>:0</a>
+                <span class="message_time"></span>
+              </div>
+              <div class="message-profile">
+                <div class="user-image">
+                  <img class="message-user-image" src="＃" alt="">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-4 col-sm-4 col-xs-12">
-      <div class="book-item">
-        <div class="book-item_image-wrapper">
-          <div class="book-image">
-            <a href="https://www.amazon.co.jp/%E9%AC%BC%E6%BB%85%E3%81%AE%E5%88%83-1-%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%E3%82%B3%E3%83%9F%E3%83%83%E3%82%AF%E3%82%B9-%E5%90%BE%E5%B3%A0-%E5%91%BC%E4%B8%96%E6%99%B4/dp/4088807235">
-            <img class="book-item-image" alt="鬼滅の刃" src="./images/鬼滅の刃.jpg"></a>
-          </div>
-          <div class="content-wrapper">
-            <div class="book-title"><a class="link-normal"href="https://www.amazon.co.jp/%E9%AC%BC%E6%BB%85%E3%81%AE%E5%88%83-1-%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%E3%82%B3%E3%83%9F%E3%83%83%E3%82%AF%E3%82%B9-%E5%90%BE%E5%B3%A0-%E5%91%BC%E4%B8%96%E6%99%B4/dp/4088807235">鬼滅の刃</a>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="book-item">
+          <div class="book-item_image-wrapper">
+            <div class="book-image">
+              <a href="https://www.amazon.co.jp/%E9%AC%BC%E6%BB%85%E3%81%AE%E5%88%83-1-%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%E3%82%B3%E3%83%9F%E3%83%83%E3%82%AF%E3%82%B9-%E5%90%BE%E5%B3%A0-%E5%91%BC%E4%B8%96%E6%99%B4/dp/4088807235">
+              <img class="book-item-image" alt="鬼滅の刃" src="./images/鬼滅の刃.jpg"></a>
             </div>
-            <div class="main-message">
-              丹次郎と煉獄が大好き！2020年に大ヒットした人気アニメ漫画！
-            </div>
-            <div class="left-container">
-              <a href="#"><span class="fas fa-heart like-button"></span>:0</a>
-              <span class="message_time"></span>
-            </div>
-            <div class="message-profile">
-              <div class="user-image">
-                <img class="message-user-image" src="＃" alt="">
+            <div class="content-wrapper">
+              <div class="book-title"><a class="link-normal"href="https://www.amazon.co.jp/%E9%AC%BC%E6%BB%85%E3%81%AE%E5%88%83-1-%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%E3%82%B3%E3%83%9F%E3%83%83%E3%82%AF%E3%82%B9-%E5%90%BE%E5%B3%A0-%E5%91%BC%E4%B8%96%E6%99%B4/dp/4088807235">鬼滅の刃</a>
+              </div>
+              <div class="main-message">
+                丹次郎と煉獄が大好き！2020年に大ヒットした人気アニメ漫画！
+              </div>
+              <div class="left-container">
+                <a href="#"><span class="fas fa-heart like-button"></span>:0</a>
+                <span class="message_time"></span>
+              </div>
+              <div class="message-profile">
+                <div class="user-image">
+                  <img class="message-user-image" src="＃" alt="">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-4 col-sm-4 col-xs-12">
-      <div class="book-item">
-        <div class="book-item_image-wrapper">
-          <div class="book-image">
-            <a href="https://www.amazon.co.jp/%E5%9F%BA%E7%A4%8E%E3%81%8B%E3%82%89%E5%AD%A6%E3%81%B6-Vue-js-mio/dp/4863542453">
-            <img class="book-item-image" alt="基礎から学ぶVue.js" src="./images/Vue.js.png"></a>
-          </div>
-          <div class="content-wrapper">
-            <div class="book-title"><a class="link-normal"href="https://www.amazon.co.jp/%E5%9F%BA%E7%A4%8E%E3%81%8B%E3%82%89%E5%AD%A6%E3%81%B6-Vue-js-mio/dp/4863542453">基礎から学ぶVue.js</a>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="book-item">
+          <div class="book-item_image-wrapper">
+            <div class="book-image">
+              <a href="https://www.amazon.co.jp/%E5%9F%BA%E7%A4%8E%E3%81%8B%E3%82%89%E5%AD%A6%E3%81%B6-Vue-js-mio/dp/4863542453">
+              <img class="book-item-image" alt="基礎から学ぶVue.js" src="./images/Vue.js.png"></a>
             </div>
-            <div class="main-message">
-              丹次郎と煉獄が大好き！2020年に大ヒットした人気アニメ漫画！
-            </div>
-            <div class="left-container">
-              <a href="#"><span class="fas fa-heart like-button"></span>:0</a>
-              <span class="message_time"></span>
-            </div>
-            <div class="message-profile">
-              <div class="user-image">
-                <img class="message-user-image" src="＃" alt="">
+            <div class="content-wrapper">
+              <div class="book-title"><a class="link-normal"href="https://www.amazon.co.jp/%E5%9F%BA%E7%A4%8E%E3%81%8B%E3%82%89%E5%AD%A6%E3%81%B6-Vue-js-mio/dp/4863542453">基礎から学ぶVue.js</a>
+              </div>
+              <div class="main-message">
+                丹次郎と煉獄が大好き！2020年に大ヒットした人気アニメ漫画！
+              </div>
+              <div class="left-container">
+                <a href="#"><span class="fas fa-heart like-button"></span>:0</a>
+                <span class="message_time"></span>
+              </div>
+              <div class="message-profile">
+                <div class="user-image">
+                  <img class="message-user-image" src="＃" alt="">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-4 col-sm-4 col-xs-12">
-      <div class="book-item">
-        <div class="book-item_image-wrapper">
-          <div class="book-image">
-            <a href="https://www.amazon.co.jp/%E6%B2%88%E9%BB%99%E3%81%AEWeb%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0-%E2%88%92Web%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%82%BF%E3%83%BC-%E3%83%9C%E3%83%BC%E3%83%B3%E3%81%AE%E9%80%86%E8%A5%B2%E2%88%92-%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%82%BF%E3%83%BC%E3%82%BA%E3%83%BB%E3%82%A8%E3%83%87%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3-%E6%9D%BE%E5%B0%BE/dp/484436474X/ref=asc_df_484436474X/?tag=jpgo-22&linkCode=df0&hvadid=295686767484&hvpos=&hvnetw=g&hvrand=11416249789131579423&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1009306&hvtargid=pla-528205940103&psc=1&th=1&psc=1">
-            <img class="book-item-image" alt="沈黙のWebマーケティング" src="./images/沈黙のWebマーケティング.jpg"></a>
-          </div>
-          <div class="content-wrapper">
-            <div class="book-title"><a class="link-normal"href="https://www.amazon.co.jp/%E6%B2%88%E9%BB%99%E3%81%AEWeb%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0-%E2%88%92Web%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%82%BF%E3%83%BC-%E3%83%9C%E3%83%BC%E3%83%B3%E3%81%AE%E9%80%86%E8%A5%B2%E2%88%92-%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%82%BF%E3%83%BC%E3%82%BA%E3%83%BB%E3%82%A8%E3%83%87%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3-%E6%9D%BE%E5%B0%BE/dp/484436474X/ref=asc_df_484436474X/?tag=jpgo-22&linkCode=df0&hvadid=295686767484&hvpos=&hvnetw=g&hvrand=11416249789131579423&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1009306&hvtargid=pla-528205940103&psc=1&th=1&psc=1">沈黙のWebマーケティング</a>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="book-item">
+          <div class="book-item_image-wrapper">
+            <div class="book-image">
+              <a href="https://www.amazon.co.jp/%E6%B2%88%E9%BB%99%E3%81%AEWeb%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0-%E2%88%92Web%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%82%BF%E3%83%BC-%E3%83%9C%E3%83%BC%E3%83%B3%E3%81%AE%E9%80%86%E8%A5%B2%E2%88%92-%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%82%BF%E3%83%BC%E3%82%BA%E3%83%BB%E3%82%A8%E3%83%87%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3-%E6%9D%BE%E5%B0%BE/dp/484436474X/ref=asc_df_484436474X/?tag=jpgo-22&linkCode=df0&hvadid=295686767484&hvpos=&hvnetw=g&hvrand=11416249789131579423&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1009306&hvtargid=pla-528205940103&psc=1&th=1&psc=1">
+              <img class="book-item-image" alt="沈黙のWebマーケティング" src="./images/沈黙のWebマーケティング.jpg"></a>
             </div>
-            <div class="main-message">
-              SEOがわからなくてもマンガになってて読みやすくてわかりやすい
-            </div>
-            <div class="left-container">
-              <a href="#"><span class="fas fa-heart like-button"></span>:0</a>
-              <span class="message_time"></span>
-            </div>
-            <div class="message-profile">
-              <div class="user-image">
-                <img class="message-user-image" src="＃" alt="">
+            <div class="content-wrapper">
+              <div class="book-title"><a class="link-normal"href="https://www.amazon.co.jp/%E6%B2%88%E9%BB%99%E3%81%AEWeb%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0-%E2%88%92Web%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%82%BF%E3%83%BC-%E3%83%9C%E3%83%BC%E3%83%B3%E3%81%AE%E9%80%86%E8%A5%B2%E2%88%92-%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%82%BF%E3%83%BC%E3%82%BA%E3%83%BB%E3%82%A8%E3%83%87%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3-%E6%9D%BE%E5%B0%BE/dp/484436474X/ref=asc_df_484436474X/?tag=jpgo-22&linkCode=df0&hvadid=295686767484&hvpos=&hvnetw=g&hvrand=11416249789131579423&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1009306&hvtargid=pla-528205940103&psc=1&th=1&psc=1">沈黙のWebマーケティング</a>
+              </div>
+              <div class="main-message">
+                SEOがわからなくてもマンガになってて読みやすくてわかりやすい
+              </div>
+              <div class="left-container">
+                <a href="#"><span class="fas fa-heart like-button"></span>:0</a>
+                <span class="message_time"></span>
+              </div>
+              <div class="message-profile">
+                <div class="user-image">
+                  <img class="message-user-image" src="＃" alt="">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-4 col-sm-4 col-xs-12">
-      <div class="book-item">
-        <div class="book-item_image-wrapper">
-          <div class="book-image">
-            <a href="https://www.amazon.co.jp/%E7%A2%BA%E3%81%8B%E3%81%AA%E5%8A%9B%E3%81%8C%E8%BA%AB%E3%81%AB%E3%81%A4%E3%81%8FJavaScript%E3%80%8C%E8%B6%85%E3%80%8D%E5%85%A5%E9%96%80-%E7%AC%AC2%E7%89%88-%E7%8B%A9%E9%87%8E-%E7%A5%90%E6%9D%B1/dp/4815601577/ref=asc_df_4815601577/?tag=jpgo-22&linkCode=df0&hvadid=342534585338&hvpos=&hvnetw=g&hvrand=17056938678779257324&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1009306&hvtargid=pla-818874997862&psc=1&th=1&psc=1">
-            <img class="book-item-image" alt="JavaScript「超入門」" src="./images/JavaScript「超入門」.jpg">
-          </div>
-          <div class="content-wrapper">
-            <div class="book-title"><a class="link-normal"href="https://www.amazon.co.jp/%E7%A2%BA%E3%81%8B%E3%81%AA%E5%8A%9B%E3%81%8C%E8%BA%AB%E3%81%AB%E3%81%A4%E3%81%8FJavaScript%E3%80%8C%E8%B6%85%E3%80%8D%E5%85%A5%E9%96%80-%E7%AC%AC2%E7%89%88-%E7%8B%A9%E9%87%8E-%E7%A5%90%E6%9D%B1/dp/4815601577/ref=asc_df_4815601577/?tag=jpgo-22&linkCode=df0&hvadid=342534585338&hvpos=&hvnetw=g&hvrand=17056938678779257324&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1009306&hvtargid=pla-818874997862&psc=1&th=1&psc=1">JavaScript「超入門」入門</a>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="book-item">
+          <div class="book-item_image-wrapper">
+            <div class="book-image">
+              <a href="https://www.amazon.co.jp/%E7%A2%BA%E3%81%8B%E3%81%AA%E5%8A%9B%E3%81%8C%E8%BA%AB%E3%81%AB%E3%81%A4%E3%81%8FJavaScript%E3%80%8C%E8%B6%85%E3%80%8D%E5%85%A5%E9%96%80-%E7%AC%AC2%E7%89%88-%E7%8B%A9%E9%87%8E-%E7%A5%90%E6%9D%B1/dp/4815601577/ref=asc_df_4815601577/?tag=jpgo-22&linkCode=df0&hvadid=342534585338&hvpos=&hvnetw=g&hvrand=17056938678779257324&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1009306&hvtargid=pla-818874997862&psc=1&th=1&psc=1">
+              <img class="book-item-image" alt="JavaScript「超入門」" src="./images/JavaScript「超入門」.jpg">
             </div>
-            <div class="main-message">
-              入門書の中でも楽しく学べて、わかりやすいです！
-            </div>
-            <div class="left-container">
-              <a href="#"><span class="fas fa-heart like-button"></span>:0</a>
-              <span class="message_time"></span>
-            </div>
-            <div class="message-profile">
-              <div class="user-image">
-                <img class="message-user-image" src="＃" alt="">
+            <div class="content-wrapper">
+              <div class="book-title"><a class="link-normal"href="https://www.amazon.co.jp/%E7%A2%BA%E3%81%8B%E3%81%AA%E5%8A%9B%E3%81%8C%E8%BA%AB%E3%81%AB%E3%81%A4%E3%81%8FJavaScript%E3%80%8C%E8%B6%85%E3%80%8D%E5%85%A5%E9%96%80-%E7%AC%AC2%E7%89%88-%E7%8B%A9%E9%87%8E-%E7%A5%90%E6%9D%B1/dp/4815601577/ref=asc_df_4815601577/?tag=jpgo-22&linkCode=df0&hvadid=342534585338&hvpos=&hvnetw=g&hvrand=17056938678779257324&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1009306&hvtargid=pla-818874997862&psc=1&th=1&psc=1">JavaScript「超入門」入門</a>
+              </div>
+              <div class="main-message">
+                入門書の中でも楽しく学べて、わかりやすいです！
+              </div>
+              <div class="left-container">
+                <a href="#"><span class="fas fa-heart like-button"></span>:0</a>
+                <span class="message_time"></span>
+              </div>
+              <div class="message-profile">
+                <div class="user-image">
+                  <img class="message-user-image" src="＃" alt="">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-4 col-sm-4 col-xs-12">
-      <div class="book-item">
-        <div class="book-item_image-wrapper">
-          <div class="book-image">
-            <a href="https://www.amazon.co.jp/%E3%82%8F%E3%81%8B%E3%81%B0%E3%81%A1%E3%82%83%E3%82%93%E3%81%A8%E5%AD%A6%E3%81%B6-Git%E4%BD%BF%E3%81%84%E6%96%B9%E5%85%A5%E9%96%80%E3%80%88GitHub%E3%80%81Bitbucket%E3%80%81SourceTree%E3%80%89-%E6%B9%8A%E5%B7%9D-%E3%81%82%E3%81%84/dp/4863542178/ref=asc_df_4863542178/?tag=jpgo-22&linkCode=df0&hvadid=295686767484&hvpos=&hvnetw=g&hvrand=1845496543404837229&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1009306&hvtargid=pla-526224398321&psc=1&th=1&psc=1">
-           <img class="book-item-image" alt="Git入門書" src="./images/Git入門書.jpg"></a>
-          </div>
-          <div class="content-wrapper">
-            <div class="book-title"><a class="link-normal"href="https://www.amazon.co.jp/%E3%82%8F%E3%81%8B%E3%81%B0%E3%81%A1%E3%82%83%E3%82%93%E3%81%A8%E5%AD%A6%E3%81%B6-Git%E4%BD%BF%E3%81%84%E6%96%B9%E5%85%A5%E9%96%80%E3%80%88GitHub%E3%80%81Bitbucket%E3%80%81SourceTree%E3%80%89-%E6%B9%8A%E5%B7%9D-%E3%81%82%E3%81%84/dp/4863542178/ref=asc_df_4863542178/?tag=jpgo-22&linkCode=df0&hvadid=295686767484&hvpos=&hvnetw=g&hvrand=1845496543404837229&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1009306&hvtargid=pla-526224398321&psc=1&th=1&psc=1">Git入門書</a>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="book-item">
+          <div class="book-item_image-wrapper">
+            <div class="book-image">
+              <a href="https://www.amazon.co.jp/%E3%82%8F%E3%81%8B%E3%81%B0%E3%81%A1%E3%82%83%E3%82%93%E3%81%A8%E5%AD%A6%E3%81%B6-Git%E4%BD%BF%E3%81%84%E6%96%B9%E5%85%A5%E9%96%80%E3%80%88GitHub%E3%80%81Bitbucket%E3%80%81SourceTree%E3%80%89-%E6%B9%8A%E5%B7%9D-%E3%81%82%E3%81%84/dp/4863542178/ref=asc_df_4863542178/?tag=jpgo-22&linkCode=df0&hvadid=295686767484&hvpos=&hvnetw=g&hvrand=1845496543404837229&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1009306&hvtargid=pla-526224398321&psc=1&th=1&psc=1">
+            <img class="book-item-image" alt="Git入門書" src="./images/Git入門書.jpg"></a>
             </div>
-            <div class="main-message">
-              Gitを使ったことがない人でもこの一冊で実践的に学習できます。
-            </div>
-            <div class="left-container">
-              <a href="#"><span class="fas fa-heart like-button"></span>:0</a>
-              <span class="message_time"></span>
-            </div>
-            <div class="message-profile">
-              <div class="user-image">
-                <img class="message-user-image" src="＃" alt="">
+            <div class="content-wrapper">
+              <div class="book-title"><a class="link-normal"href="https://www.amazon.co.jp/%E3%82%8F%E3%81%8B%E3%81%B0%E3%81%A1%E3%82%83%E3%82%93%E3%81%A8%E5%AD%A6%E3%81%B6-Git%E4%BD%BF%E3%81%84%E6%96%B9%E5%85%A5%E9%96%80%E3%80%88GitHub%E3%80%81Bitbucket%E3%80%81SourceTree%E3%80%89-%E6%B9%8A%E5%B7%9D-%E3%81%82%E3%81%84/dp/4863542178/ref=asc_df_4863542178/?tag=jpgo-22&linkCode=df0&hvadid=295686767484&hvpos=&hvnetw=g&hvrand=1845496543404837229&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1009306&hvtargid=pla-526224398321&psc=1&th=1&psc=1">Git入門書</a>
+              </div>
+              <div class="main-message">
+                Gitを使ったことがない人でもこの一冊で実践的に学習できます。
+              </div>
+              <div class="left-container">
+                <a href="#"><span class="fas fa-heart like-button"></span>:0</a>
+                <span class="message_time"></span>
+              </div>
+              <div class="message-profile">
+                <div class="user-image">
+                  <img class="message-user-image" src="＃" alt="">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-4 col-sm-4 col-xs-12">
-      <div class="book-item">
-        <div class="book-item_image-wrapper">
-          <div class="book-image">
-            <a href="https://www.amazon.co.jp/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%AE%E5%BF%83%E7%90%86%E5%AD%A6-%E2%80%95%E3%82%A6%E3%82%A7%E3%83%96%E3%82%84%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%E6%96%B0%E3%81%9F%E3%81%AA%E8%A6%96%E7%82%B9%E3%82%92%E3%82%82%E3%81%9F%E3%82%89%E3%81%99100%E3%81%AE%E6%8C%87%E9%87%9D-Susan-Weinschenk/dp/4873115574">
-           <img class="book-item-image" alt="Git入門書" src="./images/Git入門書.jpg"></a>
-          </div>
-          <div class="content-wrapper">
-            <div class="book-title"><a class="link-normal"href="https://www.amazon.co.jp/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%AE%E5%BF%83%E7%90%86%E5%AD%A6-%E2%80%95%E3%82%A6%E3%82%A7%E3%83%96%E3%82%84%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%E6%96%B0%E3%81%9F%E3%81%AA%E8%A6%96%E7%82%B9%E3%82%92%E3%82%82%E3%81%9F%E3%82%89%E3%81%99100%E3%81%AE%E6%8C%87%E9%87%9D-Susan-Weinschenk/dp/4873115574">インタフェースデザインの心理学</a>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="book-item">
+          <div class="book-item_image-wrapper">
+            <div class="book-image">
+              <a href="https://www.amazon.co.jp/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%AE%E5%BF%83%E7%90%86%E5%AD%A6-%E2%80%95%E3%82%A6%E3%82%A7%E3%83%96%E3%82%84%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%E6%96%B0%E3%81%9F%E3%81%AA%E8%A6%96%E7%82%B9%E3%82%92%E3%82%82%E3%81%9F%E3%82%89%E3%81%99100%E3%81%AE%E6%8C%87%E9%87%9D-Susan-Weinschenk/dp/4873115574">
+            <img class="book-item-image" alt="Git入門書" src="./images/Git入門書.jpg"></a>
             </div>
-            <div class="main-message">
-              無意識の意識について学習できる教材で心理学に近いです、、、
-            </div>
-            <div class="left-container">
-              <a href="#"><span class="fas fa-heart like-button"></span>:0</a>
-              <span class="message_time"></span>
-            </div>
-            <div class="message-profile">
-              <div class="user-image">
-                <img class="message-user-image" src="＃" alt="">
+            <div class="content-wrapper">
+              <div class="book-title"><a class="link-normal"href="https://www.amazon.co.jp/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%AE%E5%BF%83%E7%90%86%E5%AD%A6-%E2%80%95%E3%82%A6%E3%82%A7%E3%83%96%E3%82%84%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%E6%96%B0%E3%81%9F%E3%81%AA%E8%A6%96%E7%82%B9%E3%82%92%E3%82%82%E3%81%9F%E3%82%89%E3%81%99100%E3%81%AE%E6%8C%87%E9%87%9D-Susan-Weinschenk/dp/4873115574">インタフェースデザインの心理学</a>
+              </div>
+              <div class="main-message">
+                無意識の意識について学習できる教材で心理学に近いです、、、
+              </div>
+              <div class="left-container">
+                <a href="#"><span class="fas fa-heart like-button"></span>:0</a>
+                <span class="message_time"></span>
+              </div>
+              <div class="message-profile">
+                <div class="user-image">
+                  <img class="message-user-image" src="＃" alt="">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-4 col-sm-4 col-xs-12">
-      <div class="book-item">
-        <div class="book-item_image-wrapper">
-          <div class="book-image">
-            <a href="https://www.amazon.co.jp/%E3%82%B3%E3%83%88%E3%83%A9%E3%83%BC%E3%81%AE%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B04-0-%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%B3%E6%99%82%E4%BB%A3%E3%81%AE%E7%A9%B6%E6%A5%B5%E6%B3%95%E5%89%87-%E3%83%95%E3%82%A3%E3%83%AA%E3%83%83%E3%83%97%E3%83%BB%E3%82%B3%E3%83%88%E3%83%A9%E3%83%BC/dp/4023316156">
-           <img class="book-item-image" alt="Git入門書" src="./images/Git入門書.jpg"></a>
-          </div>
-          <div class="content-wrapper">
-            <div class="book-title"><a class="link-normal"href="https://www.amazon.co.jp/%E3%82%B3%E3%83%88%E3%83%A9%E3%83%BC%E3%81%AE%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B04-0-%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%B3%E6%99%82%E4%BB%A3%E3%81%AE%E7%A9%B6%E6%A5%B5%E6%B3%95%E5%89%87-%E3%83%95%E3%82%A3%E3%83%AA%E3%83%83%E3%83%97%E3%83%BB%E3%82%B3%E3%83%88%E3%83%A9%E3%83%BC/dp/4023316156">コトラーのマーケティング4.0</a>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="book-item">
+          <div class="book-item_image-wrapper">
+            <div class="book-image">
+              <a href="https://www.amazon.co.jp/%E3%82%B3%E3%83%88%E3%83%A9%E3%83%BC%E3%81%AE%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B04-0-%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%B3%E6%99%82%E4%BB%A3%E3%81%AE%E7%A9%B6%E6%A5%B5%E6%B3%95%E5%89%87-%E3%83%95%E3%82%A3%E3%83%AA%E3%83%83%E3%83%97%E3%83%BB%E3%82%B3%E3%83%88%E3%83%A9%E3%83%BC/dp/4023316156">
+            <img class="book-item-image" alt="Git入門書" src="./images/Git入門書.jpg"></a>
             </div>
-            <div class="main-message">
-              現代社会におけるマーケティング理論がまとまってます！
-            </div>
-            <div class="left-container">
-              <a href="#"><span class="fas fa-heart like-button"></span>:0</a>
-              <span class="message_time"></span>
-            </div>
-            <div class="message-profile">
-              <div class="user-image">
-                <img class="message-user-image" src="＃" alt="">
+            <div class="content-wrapper">
+              <div class="book-title"><a class="link-normal"href="https://www.amazon.co.jp/%E3%82%B3%E3%83%88%E3%83%A9%E3%83%BC%E3%81%AE%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B04-0-%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%B3%E6%99%82%E4%BB%A3%E3%81%AE%E7%A9%B6%E6%A5%B5%E6%B3%95%E5%89%87-%E3%83%95%E3%82%A3%E3%83%AA%E3%83%83%E3%83%97%E3%83%BB%E3%82%B3%E3%83%88%E3%83%A9%E3%83%BC/dp/4023316156">コトラーのマーケティング4.0</a>
+              </div>
+              <div class="main-message">
+                現代社会におけるマーケティング理論がまとまってます！
+              </div>
+              <div class="left-container">
+                <a href="#"><span class="fas fa-heart like-button"></span>:0</a>
+                <span class="message_time"></span>
+              </div>
+              <div class="message-profile">
+                <div class="user-image">
+                  <img class="message-user-image" src="＃" alt="">
+                </div>
               </div>
             </div>
           </div>
@@ -388,13 +393,7 @@
       </div>
     </div>
   </div>
-</div>
-  
-<footer>
-  <div class="footer-inner">
-    <p>©︎ 2020年 Youichi Ogasawara,All Right Reserved.</p>
-  </div>
-</footer>
+    
 
 
 
@@ -403,36 +402,51 @@
 
 
 
-<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> 
 
-<!-- firebase -->
 
-The core Firebase JS SDK is always required and must be listed first 
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
-<script> 
-// Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyCx4Me3bRWfGHh-d53ikj3yniDi74rG_zU",
-    authDomain: "my-address-pj-c3ba1.firebaseapp.com",
-    databaseURL: "https://my-address-pj-c3ba1-default-rtdb.firebaseio.com",
-    projectId: "my-address-pj-c3ba1",
-    storageBucket: "my-address-pj-c3ba1.appspot.com",
-    messagingSenderId: "444293817666",
-    appId: "1:444293817666:web:15ea04223a7b1f28fdd4db",
-    measurementId: "G-WT00HR3ZCL"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  const auth = firebase.auth();
-  const fs = firebase.firestore();
-</script>
+  <footer>
+    <div class="footer-inner">
+      <p>©︎ 2020年 Youichi Ogasawara,All Right Reserved.</p>
+    </div>
+  </footer>
 
-<script src="main.js"></script>
+
+
+
+
+
+
+
+  <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> 
+
+  <!-- firebase -->
+
+  The core Firebase JS SDK is always required and must be listed first 
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+  <script> 
+  // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyCx4Me3bRWfGHh-d53ikj3yniDi74rG_zU",
+      authDomain: "my-address-pj-c3ba1.firebaseapp.com",
+      databaseURL: "https://my-address-pj-c3ba1-default-rtdb.firebaseio.com",
+      projectId: "my-address-pj-c3ba1",
+      storageBucket: "my-address-pj-c3ba1.appspot.com",
+      messagingSenderId: "444293817666",
+      appId: "1:444293817666:web:15ea04223a7b1f28fdd4db",
+      measurementId: "G-WT00HR3ZCL"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const fs = firebase.firestore();
+  </script>
+
+  <script src="main.js"></script>
 </body>
 </html>

@@ -75,35 +75,3 @@ googleButton.addEventListener('click', e => {
 
 
 
-// // posts
-// const postlist = document.querySelector('.posts');
-// const setupPosts = data => {
-//   if (data.length) {
-//     let html = '';
-//     data.forEach(doc => {
-//       const li = `
-//         <li class=""list-group-item list-group-item-action>
-//         <h5>${doc.title}</h5>
-//         <p>${doc.description}</p>
-//         </li>
-//       `;
-//       htm1 += li;
-//     });
-//     postlist.innerHTML = html;
-//   } else {
-//     postlist.innerHTML = '<p class="text-center">Login to see Posts</p>';
-//   }
-// }
-// // Events
-// // List for auth changes 
-// auth.onAuthStateChanged(user => {
-//   if (user) {
-//     fs.collection('posts')
-//     .get()
-//     .then((snapshot) => {
-//       console.log(snapshot.docs);
-//     })
-//   } else {
-//     setupPosts([])
-//   }
-// })

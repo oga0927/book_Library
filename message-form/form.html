@@ -100,9 +100,63 @@
   <div id="main-view">
   </div>
 
-  
+
+  <!-- 投稿機能実装予定 -->
+  <div class="new">
+    <div class="posts-top">
+      <p>投稿する</p>
+    </div>
+    <div class="new-post">
+      <a href=""></a>
+    </div>
+    <div class="new-container">
+      <!-- <form action="posts" method="post" name="form1">
+        <div>
+          <label for="name">名前: </label>
+          <input type="text" name="name" id="name" required>
+        </div>
+        <div>
+          <label for="email">メールアドレス: </label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div>
+          <input type="submit" value="送信">
+          <input type="button" onclick="func1('sub')" value="subへ送信">
+        </div>
+      </form>
+      <script language="javascript" type="text/javascript">
+        const func1 = (page) => {
+          document.form1.action = `${page}.html`;
+          document.form1.submit();
+        }; -->
+      </script>
+
+    </div>
+  </div>
 
 
+  <form action="/posts/create" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="Fgib0gcLbe1tbaV1tgMintJ5wLgO2Fejj0zVmmQWC+oWbKFKiaY90xY8k/n/WLf1pLSAOGsGUQlUVQE3iJGxvQ==">
+
+    <p class="midashi">本のタイトル</p>
+    <input type="text" class="form-control" name="book_title" value="">
+
+    <p class="midashi">AmazonのURL</p>
+    <input type="text" class="form-control" name="amazon_url" value="">
+
+
+    <p class="midashi">コメント</p>
+    <textarea class="form-control" rows="5" name="book_message"></textarea>
+
+    <button type="submit" class="btn btn-primary submit_btn">投稿</button>
+</form>
+
+
+
+
+
+
+
+      
 
 
   <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>

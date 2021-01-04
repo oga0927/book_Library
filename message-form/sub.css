@@ -21,20 +21,24 @@ body {
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
+  margin-bottom: 20px;
 }
 
 .new {
+  max-width: 600px;
   margin: 0 auto;
-  /* border: 1px solid gray; */
+  border: 1px solid gray;
 }
 
 .posts-top {
   background-color: #343a40;
-  margin-top: 40px;
-  text-align: center;
   color: #fff;
-  font-size: 20px;
-  padding: 6px;
+  font-size: 16px;
+}
+
+.posts-top p {
+  padding: 10px;
+  text-align: center;
 }
 
 .new-container {
@@ -47,6 +51,7 @@ form {
 
 input, button, select, optgroup, textarea {
   overflow: visible;
+  margin: 0;
 }
 
 .icon-color {
@@ -54,11 +59,7 @@ input, button, select, optgroup, textarea {
 }
 
 .title {
-  padding: 0.25em 0.5em;
-  margin-top: 20px;
-}
-
-.title p {
+  margin-top: 10px;
   font-size: 16px;
 }
 
@@ -68,8 +69,25 @@ input, button, select, optgroup, textarea {
   font-size: 16px;
 }
 
-/* .btn-primary {
+.btn {
+  width: 100%;
+  margin-top: 30px;
+}
+.btn-primary {
   color: #fff;
   background-color: #007bff;
-} */
+} 
+
+.return-top {
+  margin-top: 32px;
+}
+.return-top a{
+  text-decoration: none;
+}
+
+.return-top a:hover {
+  color: blue;
+  text-decoration: none;
+}
+
 

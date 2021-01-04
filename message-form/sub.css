@@ -6,6 +6,8 @@ body {
   background-color: #fff;
   font-family: "Droid Serif", YuGothic, "游ゴシック", sans-serif;
   margin: 0;
+  padding: 0;
+  line-height: 1.5;
 }
 
 #main-view {
@@ -22,30 +24,51 @@ body {
 }
 
 .new {
-  max-width: 600px;
   margin: 0 auto;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
 }
 
 .posts-top {
   background-color: #343a40;
-  margin-top: 20px;
+  margin-top: 40px;
   text-align: center;
   color: #fff;
   font-size: 20px;
   padding: 6px;
 }
 
+.new-container {
+  padding:20px;
+}
+
 form {
   display: block;
 }
 
-input,button {
+input, button, select, optgroup, textarea {
   overflow: visible;
 }
 
-/* .title {
-  padding: 2px 5px;
-} */
+.icon-color {
+  color: blue;
+}
 
+.title {
+  padding: 0.25em 0.5em;
+  margin-top: 20px;
+}
 
+.title p {
+  font-size: 16px;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+}

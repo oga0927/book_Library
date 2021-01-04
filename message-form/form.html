@@ -110,6 +110,26 @@
       <a href=""></a>
     </div>
     <div class="new-container">
+      <form action="" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="">
+        
+        <div class="icon">
+          
+        </div>
+        <p class="title"><i class="fas fa-book-open icon-color" aria-hidden="true"></i>本のタイトル</p>
+      
+        <input type="text" class="form-control" name="book_title" value="">
+    
+        <p class="title"><i class="fas fa-link icon-color" aria-hidden="true"></i>AmazonのURL</p>
+       
+        <input type="text" class="form-control" name="amazon_url" value="">
+    
+    
+        <p class="title"><i class="far fa-comments icon-color" aria-hidden="true"></i>コメント</p>
+       
+        <textarea class="form-control" rows="5" name="book_message"></textarea>
+    
+        <button type="submit" class="btn btn-primary submit_btn">投稿</button>
+    </form>
       <!-- <form action="posts" method="post" name="form1">
         <div>
           <label for="name">名前: </label>
@@ -135,20 +155,6 @@
   </div>
 
 
-  <form action="/posts/create" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="Fgib0gcLbe1tbaV1tgMintJ5wLgO2Fejj0zVmmQWC+oWbKFKiaY90xY8k/n/WLf1pLSAOGsGUQlUVQE3iJGxvQ==">
-
-    <p class="midashi">本のタイトル</p>
-    <input type="text" class="form-control" name="book_title" value="">
-
-    <p class="midashi">AmazonのURL</p>
-    <input type="text" class="form-control" name="amazon_url" value="">
-
-
-    <p class="midashi">コメント</p>
-    <textarea class="form-control" rows="5" name="book_message"></textarea>
-
-    <button type="submit" class="btn btn-primary submit_btn">投稿</button>
-</form>
 
 
 

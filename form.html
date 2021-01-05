@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン実装</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+    crossorigin="anonymous">
+    <!-- <script src="/packs/js/application-2a6e70b0681dc14a5ee9.js" data-turbolinks-track="reload"></script> -->
+    <!-- <link rel="stylesheet" media="all" href="/assets/application-95fd0a5b9520691625b9564dc87728b4bb9698397fc9b98b03686c3ba3aeac08.css" data-turbolinks-track="reload"> -->
+    <meta name="csrf-param" content="authenticity_token">
+    <meta name="csrf-token" content="oCYYY0pocbmYpg3gGx+ye+XN5KOHjwgR9icVUiR8KTogHy9chabuec2JPU2l5rZ8JfOBUmGSeW6GZIKi/3yGxg==">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@oga_yo" />
+    <meta name="twitter:creator" content="@oga_yo">
+    <meta name="twitter:title" content="おすすめの一冊">
+    <meta name="twitter:description" content="あなたがおすすめしたいと思う一冊をみんなで投稿して共有しよう！">
+    <!-- <meta property="og:image" content=""> -->
+
+    
+    <link rel="stylesheet" href="../css/sub.css">
+
+</head>
+<body>
+  <header>
+    <!-- ナビゲーション -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#signinModal">Signin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#signupModal">SignUp</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="logout">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <!--  Modal signUp -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="signup-form">
+              <div class="form-group">
+                <input type="text" id="signup-email" class="form-control"
+                placeholder="Title" required>
+              </div>
+                <input type="password" id="signup-password" class="form-control"
+                placeholder="password" required>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Signup
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  Modal signIn -->
+    <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Signin</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="login-form">
+              <div class="form-group">
+                <input type="text" id="login-email" class="form-control"
+                placeholder="Title" required>
+              </div>
+                <input type="password" id="login-password" class="form-control"
+                placeholder="password" required>
+              </div>
+              <button type="submit" class="btn btn-secondary btn-block">
+                Login
+              </button>
+              <button type="button" class="btn btn-info btn-block" id="googleLogin">
+                Login with Google
+              </button>
+              <button type="button" class="btn btn-primary btn-block" id="facebookLogin">
+                Login with Facebook
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ここまで -->
+  
+  <div id="main-view"></div>
+
+
+  <!-- 投稿機能実装予定 -->
+  <div class="new">
+    <div class="posts-top">
+      <p>投稿する</p>
+    </div>
+
+    <div class="new-container">
+      <div class="new-post">
+        <a href=""></a>
+      </div>
+      <form action="" accept-charset="UTF-8" method="post"><input type="hidden" 
+        name="authenticity_token" value="">
+        
+        <p class="title"><i class="fas fa-book-open icon-color" aria-hidden="true"></i>本のタイトル</p>
+        <input type="text" class="form-control" name="book_title" value="">
+        
+        <p class="title"><i class="fas fa-link icon-color" aria-hidden="true"></i>AmazonのURL</p>
+        <input type="text" class="form-control" name="amazon_url" value="">
+        
+        <p class="title"><i class="far fa-comments icon-color" aria-hidden="true"></i>コメント</p>
+        <textarea class="form-control" rows="5" name="book_message"></textarea>
+        
+        <button type="submit" class="btn btn-primary submit_btn">投　稿</button>
+      </form> 
+    </div>
+    <div class="return-top">
+      <a href="/posts/index">トップに戻る</a>
+    </div>
+  </div>
+
+
+
+  
+
+
+
+      <!-- <form action="posts" method="post" name="form1">
+        <div>
+          <label for="name">名前: </label>
+          <input type="text" name="name" id="name" required>
+        </div>
+        <div>
+          <label for="email">メールアドレス: </label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div>
+          <input type="submit" value="送信">
+          <input type="button" onclick="func1('sub')" value="subへ送信">
+        </div>
+      </form>
+      <script language="javascript" type="text/javascript">
+        const func1 = (page) => {
+          document.form1.action = `${page}.html`;
+          document.form1.submit();
+        }; -->
+      
+
+
+
+
+
+
+
+
+
+      
+
+
+  <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> 
+
+ 
+</body>
+</html>

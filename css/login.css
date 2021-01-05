@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+#main-view {
+  color: white;
+  height: 300px;
+  background-color: black;
+  background-image: url("./images/本棚MB.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+body {
+  color: #000;
+  background-color: #fff;
+  font-family: "Droid Serif", YuGothic, "游ゴシック", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: #232323;
+}
+.top-massege {
+  width:100%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.space {
+  justify-content: space-between;
+}
+
+.top-left {
+  color: #fff;
+}
+
+.top-right {
+  font-size: 12px;
+}
+
+.top-right a {
+  text-decoration: none;
+}
+
+
+
+#main-view {
+  color: white;
+  height: 300px;
+  background-color: black;
+  background-image: url("../images/本棚MB.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  margin-bottom: 20px;
+}
+
+
+.new {
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid gray;
+}
+
+.posts-top {
+  background-color: #343a40;
+  color: #fff;
+  font-size: 16px;
+}
+
+.posts-top p {
+  padding: 10px;
+  text-align: center;
+}
+
+.new-container {
+  padding:20px;
+}
+
+form {
+  display: block;
+}
+
+input, button, select, optgroup, textarea {
+  overflow: visible;
+  margin: 0;
+}
+
+.icon-color {
+  color: blue;
+}
+
+.title {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+}
+
+.btn {
+  width: 100%;
+  margin-top: 30px;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+} 
+
+.return-top {
+  margin-top: 32px;
+}
+.return-top a{
+  text-decoration: none;
+}
+
+.return-top a:hover {
+  color: blue;
+  text-decoration: none;
+}
+
+

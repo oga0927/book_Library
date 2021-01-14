@@ -22,16 +22,23 @@ body {
   line-height: 1.5;
 }
 
+ul {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
 }
 
 header {
   background-color: #232323;
+  width: 100%;
+  height: 50px;
 }
 .top-massege {
   width:100%;
   margin: 0 auto;
+  align-items: center;
 }
 
 .flex {
@@ -46,12 +53,24 @@ header {
   color: #fff;
 }
 
-.top-right {
-  font-size: 12px;
+.smile {
+  
 }
 
-.top-right a {
+.top-right {
   text-decoration: none;
+  padding: 5px;
+}
+.top-right li {
+  font-size:12px;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.top-right ul li a {
+  text-decoration: none;
+  color: #fff;
 }
 
 

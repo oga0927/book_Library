@@ -12,59 +12,7 @@
 </head>
 
 <body>
-  <header class="header">
-    
-    <!-- ナビゲーションメニュー -->
-    <div class="header__inner">
-      <a class="header__logo" href="#"> 
-        <img src="#" alt="logo">
-      </a>
-
-      <div class="header__nav">
-        <ul class="nav-list">
-          <li class="nav__item"><a class="nav__link" href="#">ログイン</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">ユーザー登録</a></li>
-        </ul>
-      </div>
-
-      <!-- ハンバーガーボタン -->
-      <button class="btn__content" type="button">
-        <span class="btn">Menu</span>
-      </button>
-    </div>
-  </header>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
   <!-- 最初のローディング表示 -->
   <section id="loading" class="view">
@@ -109,28 +57,41 @@
   </section>
   <!-- /#login -->
 
+  
+
+
+
+
+
   <!-- 書籍一覧画面 -->
   <section id="bookshelf" class="view">
+
     <!-- ヘッダー -->
-    <header>
-      <div id="header">
-        <div class="header__inner">
-          <a class="header__logo" href="#"> 
-            <img src="#" alt="logo">
-          </a>
-          <a href="#add-book-modal" data-toggle="modal" class="add-button">
-            <i class="fas fa-plus-circle" aria-hidden="true"></i>
-            書籍の登録
-          </a>
-          <button class="btn btn-primary logout-button">
-            ログアウト
-          </button>
-        </div>
+  <header class="header">
+    <div class="header__inner">
+      <a class="header__logo" href="#">こんにちは！</a>
+      <!-- 書籍の登録 -->
+      <a href="#add-book-modal" data-toggle="modal" class="add-button">
+        <i class="fas fa-plus-circle" aria-hidden="true"></i>
+        書籍の登録
+      </a>
+      <div class="hidden_sm_and_down">
+        <button class="login__Button">
+          ログイン
+        </button>
+        <button class="logout__Button">
+          ログアウト
+        </button>
       </div>
-    </header>
-    <div id="cover">
-      <h1 id="cover__title">カンタン！あなたのオンライン本棚</h1>
+
+      <!-- ハンバーガーボタン -->
+      <button class="btn__content" type="button">
+        <span class="btn">Menu</span>
+      </button>
     </div>
+  </header>
+
+    <div class="main__view"></div>
     <div class="wrapper">
       <div id="main">
         <div id="book-list" class="clearfix"></div>
@@ -139,6 +100,7 @@
   </section>
   <!-- /#bookshelf -->
 
+  
   <div id="book-template">
     <!-- 書籍のテンプレート -->
     <div class="book-item">

@@ -206,7 +206,7 @@ $('#login-form').on('submit', (e) => {
 });
 
 // ログアウトボタンが押されたらログアウトする
-$('.logout-button').on('click', () => {
+$('.logout__Button').on('click', () => {
   firebase
     .auth()
     .signOut()

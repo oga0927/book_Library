@@ -1,5 +1,63 @@
 @charset "UTF-8";
 
+body {
+
+  margin: 0;
+  padding: 0;
+  font-family: 游ゴシック Medium, Yu Gothic Medium, 游ゴシック体, YuGothic, ヒラギノ角ゴ Pro, Hiragino Kaku Gothic Pro, Noto Sans Japanese, メイリオ, Meiryo, Osaka, ＭＳ Ｐゴシック, MS PGothic, sans-serif;
+  color: #7b7b7b;
+}
+
+.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+h1  {
+  font-family: 游ゴシック;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-family: 游ゴシック;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+
 /* すべての画面を最初は表示しない */
 .view {
   display: none;
@@ -91,11 +149,11 @@
   text-decoration: none;
 }
 
-#cover {
+.main__view {
   color: white;
   height: 300px;
   background-color: black;
-  background-image: url("./images/cover.jpg");
+  background-image: url("./MV.png");
   background-position: center center;
   background-repeat: no-repeat;
   display: flex;
@@ -199,7 +257,9 @@
 
 .header__inner {
   width: 100%;
+  height: 60px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -209,10 +269,31 @@
   text-decoration: none;
 }
 
-.nav__item {
-  list-style: none;
+.nav__list {
+  display: flex;
 }
 
-.nav__link a{
+.nav__item {
+  margin-right: 10px;
+}
+
+.nav__item a{
+  display: block;
   text-decoration: none;
+  color: #dc3545;
+}
+.nav__item:hover {
+  background-color: rgba(155,155,155,0.2);
+}
+
+.nav__link {
+  font-size: 16px;
+  text-align: center;
+  padding: 0.2em 1em;
+  letter-spacing: 0.1rem;
+  display: block;
+}
+
+.btn__content {
+  display: none;
 }

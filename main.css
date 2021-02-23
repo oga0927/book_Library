@@ -5,7 +5,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: 游ゴシック Medium, Yu Gothic Medium, 游ゴシック体, YuGothic, ヒラギノ角ゴ Pro, Hiragino Kaku Gothic Pro, Noto Sans Japanese, メイリオ, Meiryo, Osaka, ＭＳ Ｐゴシック, MS PGothic, sans-serif;
-  color: #7b7b7b;
 }
 
 .preload * {
@@ -21,6 +20,11 @@ a {
   color: inherit;
   cursor: pointer;
 }
+
+a:hover {
+  text-decoration: none;
+}
+
 
 h1  {
   font-family: 游ゴシック;
@@ -55,6 +59,15 @@ ul {
 
 li {
   list-style: none;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
 }
 
 
@@ -121,20 +134,17 @@ li {
   display: block;
 }
 
-#header {
-  display: flex;
-  width: 50%;
-  height: 60px;
-  margin: 0 auto;
+.header {
+  width: 100%;
+  height: 80px;
+  padding: 10px 3%;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: #232323;
 }
 
 
-#logo {
-  display: inline-block;
-}
+
 
 .add-button {
   text-decoration: none;
@@ -249,11 +259,13 @@ li {
 
 
 
-.header {
-  width: 100%;
-  height: 80px;
-  padding: 10px 3%;
+
+.header__logo {
+  display: block;
+  text-decoration: none;
+  color: #fff;
 }
+
 
 .header__inner {
   width: 100%;
@@ -263,28 +275,44 @@ li {
   justify-content: space-between;
 }
 
-.header__nav {
+.header__inner a {
   display: block;
-  list-style: none;
   text-decoration: none;
 }
 
-.nav__list {
+
+.hidden_sm_and_down {
   display: flex;
 }
 
-.nav__item {
+.header__right {
+  color: #fff;
+}
+
+.login__Button {
+  color: #fff;
+  margin-right: 10px;
+  display: none;
+}
+
+.logout__Button {
+  color: #fff;
   margin-right: 10px;
 }
+
+.new__postButton {
+  color: #fff;
+}
+
+
+
 
 .nav__item a{
   display: block;
   text-decoration: none;
   color: #dc3545;
 }
-.nav__item:hover {
-  background-color: rgba(155,155,155,0.2);
-}
+
 
 .nav__link {
   font-size: 16px;
@@ -297,3 +325,11 @@ li {
 .btn__content {
   display: none;
 }
+
+
+
+
+
+
+
+

@@ -3,69 +3,16 @@
 
 <head>
   <meta charset="utf-8">
+  <title>Bookshelf | カンタン！あなたのオンライン本棚</title>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
   <!-- 自サイトのCSS -->
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
-  <header class="header">
-    
-    <!-- ナビゲーションメニュー -->
-    <div class="header__inner">
-      <a class="header__logo" href="#"> 
-        <img src="#" alt="logo">
-      </a>
-
-      <div class="header__nav">
-        <ul class="nav-list">
-          <li class="nav__item"><a class="nav__link" href="#">ログイン</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">ユーザー登録</a></li>
-        </ul>
-      </div>
-
-      <!-- ハンバーガーボタン -->
-      <button class="btn__content" type="button">
-        <span class="btn">Menu</span>
-      </button>
-    </div>
-  </header>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <!-- 最初のローディング表示 -->
   <section id="loading" class="view">
     <i class="initial-loading-icon fas fa-sync" aria-hidden="true"></i>
@@ -111,21 +58,19 @@
 
   <!-- 書籍一覧画面 -->
   <section id="bookshelf" class="view">
-    <!-- ヘッダー -->
     <header>
       <div id="header">
-        <div class="header__inner">
-          <a class="header__logo" href="#"> 
-            <img src="#" alt="logo">
-          </a>
-          <a href="#add-book-modal" data-toggle="modal" class="add-button">
-            <i class="fas fa-plus-circle" aria-hidden="true"></i>
-            書籍の登録
-          </a>
-          <button class="btn btn-primary logout-button">
-            ログアウト
-          </button>
+        <div id="logo">
+          <!-- <a href="./bookshelf_index.php" -->
+          <a href="./index.html"><img src="./images/logo.png" alt="Bookshelf"></a>
         </div>
+        <a href="#add-book-modal" data-toggle="modal" class="add-button">
+          <i class="fas fa-plus-circle" aria-hidden="true"></i>
+          書籍の登録
+        </a>
+        <button class="btn btn-primary logout-button">
+          ログアウト
+        </button>
       </div>
     </header>
     <div id="cover">

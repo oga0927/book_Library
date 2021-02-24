@@ -136,7 +136,6 @@ const resetLoginForm = () => {
 
 // ログインした直後に呼ばれる
 const onLogin = () => {
-  console.log('ログイン完了');
 
   // 書籍一覧画面を表示
   showView('bookshelf');

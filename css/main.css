@@ -110,9 +110,6 @@ button{
  * ----------
  */
 
-#login {
-  /* padding-top: 51px; */
-}
 
 #login__help {
   display: none;
@@ -153,9 +150,68 @@ button{
   background-color: #232323;
 }
 
+.header__logo {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+.header__inner {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__inner a {
+  display: block;
+  text-decoration: none;
+}
+
+
+.hidden_sm_and_down {
+  display: flex;
+}
+
+.header__right {
+  padding: 0.5em 0.2em;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+
+.header__right:hover {
+  background-color: rgba(155, 155, 155, 0.2);
+  border-radius: 5px;
+}
+
+.posts {
+  width: 450px;
+  margin: 0 auto;
+  display: block;
+  padding: 30px;
+  letter-spacing: 0.2em;
+  color: #232323;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: solid 1px #232323;
+  margin-bottom: 50px;
+}
 
 
 
+.btn-success {
+  background-color: #ec5252;
+  border: 1px solid transparent;
+  width: 100%;
+}
+
+.btn-success:hover {
+  color: #fff;
+  background-color: #992337;
+  border: 1px solid transparent;
+}
 .add-button {
   text-decoration: none;
   color: #28a745;
@@ -267,41 +323,7 @@ button{
   content: "参照";
 }
 
-.header__logo {
-  display: block;
-  text-decoration: none;
-  color: #fff;
-}
 
-
-.header__inner {
-  width: 100%;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header__inner a {
-  display: block;
-  text-decoration: none;
-}
-
-
-.hidden_sm_and_down {
-  display: flex;
-}
-
-.header__right {
-  padding: 0.5em 0.2em;
-  transition: 0.3s;
-  margin-right: 10px;
-}
-
-.header__right:hover {
-  background-color: rgba(155, 155, 155, 0.2);
-  border-radius: 5px;
-}
 
 
 .logout__Button {
@@ -311,9 +333,6 @@ button{
 .new__postButton {
   color: #fff;
 }
-
-
-
 
 .nav__item a{
   display: block;
@@ -333,11 +352,3 @@ button{
 .btn__content {
   display: none;
 }
-
-
-
-
-
-
-
-

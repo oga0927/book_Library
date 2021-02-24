@@ -173,7 +173,7 @@ button{
   color: white;
   height: 300px;
   background-color: black;
-  background-image: url("./MV.png");
+  background-image: url("/MV.png");
   background-position: center center;
   background-repeat: no-repeat;
   display: flex;

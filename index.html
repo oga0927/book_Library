@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
   <!-- 自サイトのCSS -->
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
@@ -22,6 +22,7 @@
 
   <!-- ログイン画面 -->
   <section id="login" class="view">
+    
     <div class="main__view"></div>
     <div class="container">
       <div class="row justify-content-center">
@@ -54,6 +55,9 @@
           </form>
         </div>
       </div>
+    </div>
+    <div class="return-top">
+      <a href="./index.html">トップに戻る</a>
     </div>
   </section>
   <!-- /#login -->
@@ -92,13 +96,14 @@
           </button>
         </div>
       </div>
-
       <!-- ハンバーガーボタン -->
       <button class="btn__content" type="button">
         <span class="btn">Menu</span>
       </button>
     </div>
   </header>
+  <!-- ヘッダーここまで -->
+
 
     <div class="main__view"></div>
     <div class="wrapper">
@@ -187,11 +192,7 @@
   <script>
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAOvVIcBqZYs5QulNDLDjfzphgQGA0ZuU0",
-  authDomain: "book-liblary.firebaseapp.com",
-  databaseURL: "https://book-liblary-default-rtdb.firebaseio.com",
-  projectId: "book-liblary",
-  storageBucket: "book-liblary.appspot.com",
+  
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);

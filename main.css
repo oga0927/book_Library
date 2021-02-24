@@ -111,12 +111,22 @@ button{
  */
 
 #login {
-  padding-top: 51px;
+  /* padding-top: 51px; */
 }
 
 #login__help {
   display: none;
 }
+
+/**
+ * ----------
+ * ユーザー登録画面
+ * ----------
+ */
+
+
+
+
 
 /**
  * ----------
@@ -170,6 +180,7 @@ button{
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
+  margin-bottom: 50px;
 }
 
 #cover__title {
@@ -256,10 +267,6 @@ button{
   content: "参照";
 }
 
-
-
-
-
 .header__logo {
   display: block;
   text-decoration: none;
@@ -286,18 +293,19 @@ button{
 }
 
 .header__right {
-  color: #fff;
+  padding: 0.5em 0.2em;
+  transition: 0.3s;
+  margin-right: 10px;
 }
 
-.login__Button {
-  color: #fff;
-  margin-right: 10px;
-  display: none;
+.header__right:hover {
+  background-color: rgba(155, 155, 155, 0.2);
+  border-radius: 5px;
 }
+
 
 .logout__Button {
   color: #fff;
-  margin-right: 10px;
 }
 
 .new__postButton {

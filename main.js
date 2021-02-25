@@ -171,7 +171,7 @@ firebase.auth().onAuthStateChanged((user) => {
 });
 
 // ログインフォームが送信されたらログインする
-$('#login-form').on('submit', (e) => {
+$('#form-container').on('submit', (e) => {
   e.preventDefault();
 
   const $loginButton = $('#login__submit-button');
@@ -186,14 +186,12 @@ $('#login-form').on('submit', (e) => {
     .signInWithEmailAndPassword(email, password)
     .then(() => {
       // ログインに成功したときの処理
-      console.log('ログインしました。');
-
+      
       // ログインフォームを初期状態に戻す
       resetLoginForm();
     })
-    .catch((error) => {
+    .catch(() => {
       // ログインに失敗したときの処理
-      console.error('ログインエラー', error);
 
       $('#login__help')
         .text('ログインに失敗しました。')
@@ -213,6 +211,22 @@ $('.logout__Button').on('click', () => {
       console.error('ログアウトに失敗:', error);
     });
 });
+
+// 新規ユーザー登録
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * -------------------------

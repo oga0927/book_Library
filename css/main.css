@@ -72,7 +72,15 @@ button{
 
 
 /* すべての画面を最初は表示しない */
-.view {
+.view  {
+  display: none;
+}
+
+/* .login-view {
+  display: none;
+} */
+
+.signup-view {
   display: none;
 }
 

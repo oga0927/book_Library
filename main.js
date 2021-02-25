@@ -113,6 +113,7 @@ const loadBookshelfView = () => {
 // ビュー（画面）を変更する
 const showView = (id) => {
   $('.view').hide();
+  $('.login-view').hide();
   $(`#${id}`).fadeIn();
 
   if (id === 'bookshelf') {

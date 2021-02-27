@@ -187,7 +187,7 @@ $('#form-container').on('submit', (e) => {
     .signInWithEmailAndPassword(email, password)
     .then(() => {
       // ログインに成功したときの処理
-      
+      $('logout__Button').text('ログアウト');
       // ログインフォームを初期状態に戻す
       resetLoginForm();
     })
@@ -199,7 +199,7 @@ $('#form-container').on('submit', (e) => {
         .show();
 
       // ログインボタンを元に戻す
-      $loginButton.text('ログイン');
+      $loginButton.text('aaaa');
     });
 });
 

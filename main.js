@@ -114,7 +114,7 @@ const loadBookshelfView = () => {
 const showView = (id) => {
   $('.view').hide();
   $('.login-view').hide();
-  // $('.signup-view').hide();
+  $('.signup-view').hide();
 
   $(`#${id}`).fadeIn();
 
@@ -123,25 +123,6 @@ const showView = (id) => {
   }
 };
 
-// const loginView = (id) => {
-//   $('.view').hide();
-//   $('.signup').hide();
-//   $(`#${id}`).fadeIn();
-
-//   if (id === 'bookshelf') {
-//     loadBookshelfView();
-//   }
-// };
-
-// const signupView = (id) => {
-//   $('.view').hide();
-//   $('.login-view').hide();
-//   $(`#${id}`).fadeIn();
-
-//   if (id === 'bookshelf') {
-//     loadBookshelfView();
-//   }
-// }
 
 /**
  * -------------------------
@@ -236,56 +217,73 @@ $('.login__Button').on('click', () => {
     });
 });
 
-// 新規ユーザー登録
-// $('.new__post__Button').on('click', () => {
-//   e.preventDefault();
 
-//   const $postButton = $('.');
-//   $postButton.text('送信中…');
 
-//   const email = $('#signup-email').val();
-//   const password = $('#signup-password').val();
-  
-//   firebase
-//     .auth()
-//     .createUserWithEmailAndPassword(email, password)
-//     .then((user) => {
-    
-//       return user;
-//   })
-//   .catch((error) => {
-//   console.log(error);
-//   });
 
-// })
 
-$('.new__post__Button').on('submit', (e) => {
+
+
+
+
+
+/**
+ * -------------------------
+ * ユーザー登録関連の関数
+ * -------------------------
+ */
+
+
+const resetSignupForm = () => {
+  $('#signup__help').hide();
+  $('#signup__submit-button')
+    .prop('disabled', false)
+    .text('ログイン');
+};
+
+// 登録した直後に呼ばれる
+const onSignup = () => {
+
+  // 書籍一覧画面を表示
+  showView('bookshelf');
+};
+
+// 登録フォームが送信されたらログインする
+$('#form-container').on('submit', (e) => {
   e.preventDefault();
 
-  const $loginButton = $('#login__submit-button');
-  $loginButton.text('送信中…');
+  const $signupButton = $('#signup__submit-button');
+  $signupButton.text('送信中…');
 
-  const email = $('#login-email').val();
-  const password = $('#login-password').val();
-  $('.login__Button').text('ログアウト')
-  // ログインを試みる
+  const email = $('#signup-email').val();
+  const password = $('#signup-password').val();
+  
+  // 登録を試みる
   firebase
     .auth()
-    .signInWithEmailAndPassword(email, password)
-    .then(() => {
-      // ログインに成功したときの処理
+    .createUserWithEmailAndPassword(email, password)
+    .then((user) => {
+      // 登録に成功したときの処理
       
-      // ログインフォームを初期状態に戻す
-      resetLoginForm();
+      // 登録フォームを初期状態に戻す
+      resetSignupForm();
+      return user;
     })
-    .catch(() => {
-      // ログインに失敗したときの処理
+    .catch((error) => {
+      // 登録に失敗したときの処理
 
       $('#signup__help')
         .text('登録に失敗しました。')
         .show();
+        console.log(error);
     });
 });
+
+// 登録ボタンが押されたらユーザーフォーム画面に移動する
+$('.new__post__Button').on('click', () => {
+    $('.signup-view').show();
+    $('.login-view').hide();
+    console.log('成功');
+  });
 
 
 

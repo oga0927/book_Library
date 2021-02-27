@@ -81,7 +81,7 @@ button{
 } */
 
 .signup-view {
-  display: none;
+  /* display: none; */
 }
 
 /**
@@ -120,6 +120,10 @@ button{
 
 
 #login__help {
+  display: none;
+}
+
+#signup__help {
   display: none;
 }
 
@@ -334,11 +338,11 @@ button{
 
 
 
-.logout__Button {
+.login__Button {
   color: #fff;
 }
 
-.new__postButton {
+.new__post__Button {
   color: #fff;
 }
 

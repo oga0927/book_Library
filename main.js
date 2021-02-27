@@ -110,16 +110,38 @@ const loadBookshelfView = () => {
  * ----------------------
  */
 
-// ビュー（画面）を変更する
+// ビュー（画面）を変更する   hide()まとめれる？
 const showView = (id) => {
   $('.view').hide();
   $('.login-view').hide();
+  // $('.signup-view').hide();
+
   $(`#${id}`).fadeIn();
 
   if (id === 'bookshelf') {
     loadBookshelfView();
   }
 };
+
+// const loginView = (id) => {
+//   $('.view').hide();
+//   $('.signup').hide();
+//   $(`#${id}`).fadeIn();
+
+//   if (id === 'bookshelf') {
+//     loadBookshelfView();
+//   }
+// };
+
+// const signupView = (id) => {
+//   $('.view').hide();
+//   $('.login-view').hide();
+//   $(`#${id}`).fadeIn();
+
+//   if (id === 'bookshelf') {
+//     loadBookshelfView();
+//   }
+// }
 
 /**
  * -------------------------
@@ -180,14 +202,14 @@ $('#form-container').on('submit', (e) => {
 
   const email = $('#login-email').val();
   const password = $('#login-password').val();
-
+  $('.login__Button').text('ログアウト')
   // ログインを試みる
   firebase
     .auth()
     .signInWithEmailAndPassword(email, password)
     .then(() => {
       // ログインに成功したときの処理
-      $('logout__Button').text('ログアウト');
+      
       // ログインフォームを初期状態に戻す
       resetLoginForm();
     })
@@ -199,21 +221,71 @@ $('#form-container').on('submit', (e) => {
         .show();
 
       // ログインボタンを元に戻す
-      $loginButton.text('aaaa');
+      $loginButton.text('ログイン');
     });
 });
 
 // ログアウトボタンが押されたらログアウトする
-$('.logout__Button').on('click', () => {
+$('.login__Button').on('click', () => {
   firebase
     .auth()
     .signOut()
+    $('.login__Button').text('ログイン')
     .catch((error) => {
       console.error('ログアウトに失敗:', error);
     });
 });
 
 // 新規ユーザー登録
+// $('.new__post__Button').on('click', () => {
+//   e.preventDefault();
+
+//   const $postButton = $('.');
+//   $postButton.text('送信中…');
+
+//   const email = $('#signup-email').val();
+//   const password = $('#signup-password').val();
+  
+//   firebase
+//     .auth()
+//     .createUserWithEmailAndPassword(email, password)
+//     .then((user) => {
+    
+//       return user;
+//   })
+//   .catch((error) => {
+//   console.log(error);
+//   });
+
+// })
+
+$('.new__post__Button').on('submit', (e) => {
+  e.preventDefault();
+
+  const $loginButton = $('#login__submit-button');
+  $loginButton.text('送信中…');
+
+  const email = $('#login-email').val();
+  const password = $('#login-password').val();
+  $('.login__Button').text('ログアウト')
+  // ログインを試みる
+  firebase
+    .auth()
+    .signInWithEmailAndPassword(email, password)
+    .then(() => {
+      // ログインに成功したときの処理
+      
+      // ログインフォームを初期状態に戻す
+      resetLoginForm();
+    })
+    .catch(() => {
+      // ログインに失敗したときの処理
+
+      $('#signup__help')
+        .text('登録に失敗しました。')
+        .show();
+    });
+});
 
 
 

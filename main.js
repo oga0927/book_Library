@@ -175,7 +175,7 @@ firebase.auth().onAuthStateChanged((user) => {
 });
 
 // ログインフォームが送信されたらログインする
-$('#form-container').on('submit', (e) => {
+$('#login-container').on('submit', (e) => {
   e.preventDefault();
 
   const $loginButton = $('#login__submit-button');
@@ -218,14 +218,6 @@ $('.login__Button').on('click', () => {
 });
 
 
-
-
-
-
-
-
-
-
 /**
  * -------------------------
  * ユーザー登録関連の関数
@@ -248,7 +240,7 @@ const onSignup = () => {
 };
 
 // 登録フォームが送信されたらログインする
-$('#form-container').on('submit', (e) => {
+$('#signup-container').on('submit', (e) => {
   e.preventDefault();
 
   const $signupButton = $('#signup__submit-button');
@@ -282,20 +274,10 @@ $('#form-container').on('submit', (e) => {
 $('.new__post__Button').on('click', () => {
     $('.signup-view').show();
     $('.login-view').hide();
+    $('.view').hide();
     console.log('成功');
+    resetLoginForm();
   });
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

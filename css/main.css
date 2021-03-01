@@ -121,6 +121,7 @@ button{
   display: none;
 }
 
+
 /**
  * ----------
  * ユーザー登録画面
@@ -180,13 +181,13 @@ button{
   display: flex;
 }
 
-.header__right {
+.header__nav {
   padding: 0.5em 0.2em;
   transition: 0.3s;
   margin-right: 10px;
 }
 
-.header__right:hover {
+.header__nav:hover {
   background-color: rgba(155, 155, 155, 0.2);
   border-radius: 5px;
 }
@@ -336,9 +337,14 @@ button{
   color: #fff;
 }
 
+.logout__Button {
+  color: #fff;
+}
+
 .new__post__Button {
   color: #fff;
 }
+
 
 .nav__item a{
   display: block;

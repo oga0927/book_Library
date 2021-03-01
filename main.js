@@ -167,9 +167,11 @@ firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     // ログイン済
     onLogin();
+    console.log('ログイン中');
   } else {
     // 未ログイン
     onLogout();
+    console.log('ログアウト中');
   }
 });
 
@@ -205,18 +207,6 @@ $('#login-container').on('submit', (e) => {
     });
 });
 
-// ログアウトボタンが押されたらログアウトする
-$('.login__Button').on('click', () => {
-  firebase
-    .auth()
-    .signOut()
-      $('.login__Button').text('ログイン')
-    .catch((error) => {
-      resetLoginForm();
-      $('login-view').show();
-      console.error('ログアウトに失敗:', error);
-    });
-});
 
 
 /**
@@ -273,6 +263,7 @@ $('#signup-container').on('submit', (e) => {
 
 // 登録ボタンが押されたらユーザーフォーム画面に移動する
 $('.new__post__Button').on('click', () => {
+  
     $('.signup-view').show();
     $('.login-view').hide();
     $('.view').hide();

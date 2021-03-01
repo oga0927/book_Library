@@ -110,11 +110,10 @@ const loadBookshelfView = () => {
  * ----------------------
  */
 
-// ビュー（画面）を変更する   hide()まとめれる？
+// ビュー（画面）を変更する
 const showView = (id) => {
   $('.view').hide();
-  $('.login-view').hide();
-  $('.signup-view').hide();
+  $('.login-view, .signup-view').hide();
 
   $(`#${id}`).fadeIn();
 
@@ -211,8 +210,10 @@ $('.login__Button').on('click', () => {
   firebase
     .auth()
     .signOut()
-    $('.login__Button').text('ログイン')
+      $('.login__Button').text('ログイン')
     .catch((error) => {
+      resetLoginForm();
+      $('login-view').show();
       console.error('ログアウトに失敗:', error);
     });
 });
@@ -276,7 +277,7 @@ $('.new__post__Button').on('click', () => {
     $('.login-view').hide();
     $('.view').hide();
     console.log('成功');
-    resetLoginForm();
+    resetLoginForm()
   });
 
 

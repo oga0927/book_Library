@@ -206,6 +206,13 @@ button{
   margin-bottom: 50px;
 }
 
+.visible-block {
+  display: block;
+}
+
+.hidden-block {
+  display: none;
+}
 
 
 .btn-success {

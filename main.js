@@ -161,17 +161,48 @@ const onLogout = () => {
  * ------------------
  */
 
+let currentUID = null;
+
+
+const changeView = () => {
+  if (currentUID != null) {
+    // ログイン状態のとき
+    $('.visible-on-login')
+      .removeClass('hidden-block')
+      .addClass('visible-block');
+
+    $('.visible-on-logout')
+      .removeClass('visible-block')
+      .addClass('hidden-block');
+  } else {
+    // ログアウト状態のとき
+    $('.visible-on-login')
+      .removeClass('visible-block')
+      .addClass('hidden-block');
+
+    $('.visible-on-logout')
+      .removeClass('hidden-block')
+      .addClass('visible-block');
+  }
+};
+
+
+
 // ログイン状態の変化を監視する
 firebase.auth().onAuthStateChanged((user) => {
   // ログイン状態が変化した
   if (user) {
     // ログイン済
+    currentUID = user.uid;
     onLogin();
-    console.log('ログイン中');
+    changeView();
+    console.log('状態：ログイン中');
   } else {
     // 未ログイン
     onLogout();
-    console.log('ログアウト中');
+    changeView();
+    currentUID = null;
+    console.log('状態：ログアウト中');
   }
 });
 
@@ -184,7 +215,7 @@ $('#login-container').on('submit', (e) => {
 
   const email = $('#login-email').val();
   const password = $('#login-password').val();
-  $('.login__Button').text('ログアウト')
+
   // ログインを試みる
   firebase
     .auth()
@@ -204,6 +235,19 @@ $('#login-container').on('submit', (e) => {
 
       // ログインボタンを元に戻す
       $loginButton.text('ログイン');
+    });
+});
+
+
+
+
+// ログアウトボタンが押されたらログアウトする
+$('.logout__Button').on('click', () => {
+  firebase
+    .auth()
+    .signOut()
+    .catch((error) => {
+      console.error('ログアウトに失敗:', error);
     });
 });
 
@@ -263,12 +307,8 @@ $('#signup-container').on('submit', (e) => {
 
 // 登録ボタンが押されたらユーザーフォーム画面に移動する
 $('.new__post__Button').on('click', () => {
-  
     $('.signup-view').show();
-    $('.login-view').hide();
-    $('.view').hide();
     console.log('成功');
-    resetLoginForm()
   });
 
 

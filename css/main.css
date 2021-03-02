@@ -215,13 +215,16 @@ button{
 }
 
 
-.btn-success {
+.login__accunt {
   background-color: #ec5252;
+  color: #fff;
   border: 1px solid transparent;
+  border-radius: 0.4em;
   width: 100%;
+  height: 40px;
 }
 
-.btn-success:hover {
+.login__accunt:hover {
   color: #fff;
   background-color: #992337;
   border: 1px solid transparent;
@@ -342,6 +345,7 @@ button{
 
 .login__Button {
   color: #fff;
+  padding: 0px 16px;
 }
 
 .logout__Button {
@@ -350,6 +354,7 @@ button{
 
 .new__post__Button {
   color: #fff;
+  padding: 0px 16px;
 }
 
 

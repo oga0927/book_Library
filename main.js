@@ -113,7 +113,7 @@ const loadBookshelfView = () => {
 // ビュー（画面）を変更する
 const showView = (id) => {
   $('.view').hide();
-  $('.login-view, .signup-view').hide();
+  // $('.signup-view').hide();
 
   $(`#${id}`).fadeIn();
 
@@ -237,8 +237,6 @@ $('#login-container').on('submit', (e) => {
       $loginButton.text('ログイン');
     });
 });
-
-
 
 
 // ログアウトボタンが押されたらログアウトする
